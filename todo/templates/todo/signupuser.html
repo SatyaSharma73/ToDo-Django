@@ -12,6 +12,7 @@
   </head>
   <body>
     <h1>This is a Sign Up page</h1>
+    <h2>{{error}}</h2>
 <form method="POST">
 {% csrf_token %}
 {{form.as_p}}
