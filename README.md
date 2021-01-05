@@ -1,3 +1,3 @@
 # ToDo-Django
 
-A simlpe Django TODO Website 
+A simpe Django TODO Website 
