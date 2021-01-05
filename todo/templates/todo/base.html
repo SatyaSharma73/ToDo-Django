@@ -1,10 +1,9 @@
-
 {%if user.is_authenticated%}
 logged In as {{user.username}}
 
 <form action="{%url 'logoutuser'%}" method="POST">
-{% csrf_token %}
-<input class="btn btn-primary" type="submit" value="LogOut">
+    {% csrf_token %}
+    <input class="btn btn-primary" type="submit" value="LogOut">
 </form>
 
 {%else%}

@@ -1,16 +1,16 @@
 {% extends 'todo/base.html' %}
 {%block content%}
 
-    <h1>Create Todo</h1>
-    <h2>{{error}}</h2>
+<h1>Create Todo</h1>
+<h2>{{error}}</h2>
 
 <form method="POST">
 
-{% csrf_token %}
+    {% csrf_token %}
 
-{{form.as_p}}
+    {{form.as_p}}
 
-<input class="btn btn-primary" type="submit" value="Save">
+    <input class="btn btn-primary" type="submit" value="Save">
 </form>
 
 {% endblock %}

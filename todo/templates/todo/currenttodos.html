@@ -1,4 +1,12 @@
 {% extends 'todo/base.html' %}
 {%block content%}
 Current page
+
+<ul>
+    {%for todos in todos %}
+    <li>
+        {%if todos.important%} <b> {%endif%} {{todos.title}} {%if todos.important%}</b> {%endif%}
+        {%if todos.memo%} -- {{todos.memo}} {%endif%}</li>
+</ul>
+{% endfor%}
 {% endblock %}
