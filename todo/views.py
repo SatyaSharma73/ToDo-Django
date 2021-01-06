@@ -13,7 +13,8 @@ from django.contrib.auth.decorators import login_required
 def home(request):
     return render(request,'todo/home.html')
 
-
+def about(request):
+    return render(request,'todo/about.html')
 
 
 def signupuser(request):
@@ -54,7 +55,7 @@ def logoutuser(request):
     if request.method == 'POST':
         logout(request)
         return redirect('home')
-@login_required   
+    
 def createtodo(request):
     if request.method == 'GET':
         return render(request,'todo/createtodo.html',{'form':TodoForm()})
