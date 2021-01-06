@@ -1,0 +1,21 @@
+{% extends 'todo/base.html' %}
+{%block content%}
+{{error}}
+{{todos.title}}
+<form method="POST">
+{% csrf_token %}
+{{form.as_p}}
+<input class="btn btn-primary" type="submit" value="Save">
+</form>
+
+<form method="POST" action="{% url 'completetodo' todos.id %}">
+{% csrf_token %}
+<input class="btn btn-primary" type="submit" value="Complete">
+</form>
+
+<form method="POST" action="{% url 'deletetodo' todos.id %}">
+{% csrf_token %}
+<input class="btn btn-primary" type="submit" value="Delete">
+</form>
+
+{% endblock %}
